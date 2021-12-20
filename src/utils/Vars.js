@@ -31,6 +31,9 @@ const Vars = css`
     --light: #f8f9fa;
     --dark: #343a40;
     //* Fonts
+    --fontMain: 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
     //* Widths
     --maxWidth: 1300px;
     --auto: 0 auto;

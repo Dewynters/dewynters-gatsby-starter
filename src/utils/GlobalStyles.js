@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         margin: 0 auto;
         height: auto;
+        font-family: var(--Gotham);
     }
    h1 {
         font-size: ${props => props.theme.font.h1.size};
@@ -82,6 +83,21 @@ const GlobalStyles = createGlobalStyle`
     a, a:focus {
         color: inherit;
         text-decoration: none;
+    }
+    //? For screen readers 
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+    ::selection {
+        background: var(--black); /* WebKit/Blink Browsers */
+        color: var(--main);
     }
 `
 export default GlobalStyles 
