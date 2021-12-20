@@ -1,55 +1,63 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import { ThemeProvider } from 'styled-components'
+//* CSS
+import 'normalize.css'
+import '../utils/scss/main.scss'
+//* Local Imports
+import Footer from 'components/global/footer'
+import Nav from 'components/global/nav'
+import GlobalStyles from 'utils/GlobalStyles'
+import theme from 'utils/Theme'
+import { graphql, useStaticQuery } from 'gatsby'
+import SEO from 'components/functional/seo'
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+if (typeof window !== 'undefined') {
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]')
+}
 
-import Header from "./header"
-import "./layout.css"
+const icon = 'favicon.png'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Layout = ({ children, title, description }) => {
+  const { allSite } = useStaticQuery(graphql`
+    query SiteQuery {
+      allSite {
+        nodes {
+          siteMetadata {
+            title
+            siteUrl
+            siteName
+            description
+            author
+          }
         }
       }
     }
   `)
-
+  const settings = allSite.nodes[0].siteMetadata
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Corporation',
+    name: `${settings.title}`,
+    description: `${settings.description}`,
+    url: `${settings.siteUrl}`,
+    logo: `${settings.siteUrl}/${icon}`,
+  }
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <ThemeProvider theme={theme}>
+      <SEO schemaMarkup={schema} title={title} description={description} />
+      <>
+        <GlobalStyles />
+        <Nav />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </>
+    </ThemeProvider>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
