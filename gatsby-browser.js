@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+const React = require("react");
 
-// You can delete this file if you're not using it
+//* Any scripts that need to be injected in head
+exports.onClientEntry = () => {
+  console.log('Plugins')
+};
