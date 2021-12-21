@@ -4,7 +4,7 @@ import Animations from './Animations'
 import Typography from './Typography'
 import Vars from './Vars'
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyles`
     ${Vars}
     ${Animations}
     ${Typography}

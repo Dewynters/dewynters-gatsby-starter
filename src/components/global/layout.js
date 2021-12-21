@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 //* CSS
 import 'normalize.css'
-import '../utils/scss/main.scss'
 //* Local Imports
 import Footer from 'components/global/footer'
 import Nav from 'components/global/nav'

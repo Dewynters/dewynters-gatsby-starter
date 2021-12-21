@@ -57,13 +57,13 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: '',
-        timeout: 3500,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-mailchimp',
+    //   options: {
+    //     endpoint: '',
+    //     timeout: 3500,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
