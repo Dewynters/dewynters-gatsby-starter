@@ -4,6 +4,10 @@
   "description": "Dewynters starter",
   "version": "0.1.0",
   "author": "Nick East",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.17"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.2",
     "bootstrap": "5.1.3",
