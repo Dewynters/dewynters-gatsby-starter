@@ -49,11 +49,11 @@ const Layout = ({ children, title, description }) => {
       <SEO schemaMarkup={schema} title={title} description={description} />
       <>
         <GlobalStyles />
-        <Nav />
+        {/* <Nav /> */}
         <main>
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </>
     </ThemeProvider>
   )

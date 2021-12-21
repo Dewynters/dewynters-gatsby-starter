@@ -1,10 +1,11 @@
-import {createGlobalStyles} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+
 import { media } from 'utils/Media'
 import Animations from './Animations'
 import Typography from './Typography'
 import Vars from './Vars'
 
-const GlobalStyles = createGlobalStyles`
+const GlobalStyles = createGlobalStyle`
     ${Vars}
     ${Animations}
     ${Typography}
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyles`
         overflow-x: hidden;
         margin: 0 auto;
         height: auto;
-        font-family: var(--Gotham);
+        font-family: var(--fontMain);
     }
    h1 {
         font-size: ${props => props.theme.font.h1.size};
