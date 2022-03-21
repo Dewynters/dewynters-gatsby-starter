@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 
-export default function SEO({ title, description, schemaMarkup, img }) {
+export default function Seo({ title, description, schemaMarkup, img }) {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(graphql`
     query {

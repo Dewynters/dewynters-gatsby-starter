@@ -1,15 +1,15 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 //* CSS
 import 'normalize.css'
+import 'utils/scss/main.scss'
 //* Local Imports
 import Footer from 'components/global/footer'
 import Nav from 'components/global/nav'
 import GlobalStyles from 'utils/GlobalStyles'
 import theme from 'utils/Theme'
 import { graphql, useStaticQuery } from 'gatsby'
-import SEO from 'components/functional/seo'
+import Seo from 'utils/Seo'
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -46,7 +46,7 @@ const Layout = ({ children, title, description }) => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <SEO schemaMarkup={schema} title={title} description={description} />
+      <Seo schemaMarkup={schema} title={title} description={description} />
       <>
         <GlobalStyles />
         {/* <Nav /> */}

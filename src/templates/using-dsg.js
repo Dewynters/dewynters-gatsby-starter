@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Layout from "components/global/layout"
+import Layout from "utils/Layout"
 
 
 const UsingDSG = () => (
