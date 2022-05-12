@@ -1,10 +1,19 @@
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+
+console.log(`Using environment config: '${activeEnv}'`)
+
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Dewynters Starter`,
     description: `Dewynters`,
     author: `Dewynters`,
-    siteUrl: `https://dewynters.com`,
     siteName: `Dewynters`,
+    siteUrl: process.env.GATSBY_FRONTEND_URL
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,9 +22,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-root-import`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-resolve-src`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -81,21 +90,28 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: 'https://dewynters.com',
+        siteUrl: process.env.GATSBY_FRONTEND_URL,
       },
     },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://dewynters.com',
-        sitemap: 'https://dewynters.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        host: process.env.GATSBY_FRONTEND_URL,
+        sitemap: `${process.env.GATSBY_FRONTEND_URL}/sitemap/sitemap-index.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          staging: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }
