@@ -93,7 +93,6 @@ module.exports = {
         siteUrl: process.env.GATSBY_FRONTEND_URL,
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
