@@ -1,0 +1,5 @@
+export { Footer } from './Footer'
+export { Nav } from './Nav'
+export { BackgroundImage } from './BackgroundImage'
+export { MaxWidth } from './MaxWidth'
+export { StyledButton } from './StyledButton'

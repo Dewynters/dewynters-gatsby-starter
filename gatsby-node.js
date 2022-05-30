@@ -9,13 +9,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-
 //* Creating pages via DSG -Deferred Static Generation
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
+    path: '/using-dsg',
+    component: require.resolve('./src/templates/using-dsg.js'),
     context: {},
     defer: true,
   })

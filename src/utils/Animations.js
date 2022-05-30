@@ -14,7 +14,24 @@ const Animations = css`
       opacity: 1;
     }
   }
-
+  //? Nav Scroll animation
+  .nav-background {
+    transition: var(--transition);
+  }
+  .nav-background-active {
+    background: rgba(0, 0, 0, 0.25);
+    .nav-wrapper {
+      padding: 0.5rem 0 !important;
+    }
+    svg {
+      width: 120px !important;
+    }
+    button {
+      a {
+        padding: 0.35rem 0.5rem !important;
+      }
+    }
+  }
 `
 
 export default Animations

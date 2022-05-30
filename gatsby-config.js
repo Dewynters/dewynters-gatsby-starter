@@ -13,7 +13,7 @@ module.exports = {
     description: `Dewynters`,
     author: `Dewynters`,
     siteName: `Dewynters`,
-    siteUrl: process.env.GATSBY_FRONTEND_URL
+    siteUrl: process.env.GATSBY_FRONTEND_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,7 @@ module.exports = {
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,6 +47,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -62,7 +71,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include:  /svgs/
+          include: /svgs/,
         },
       },
     },

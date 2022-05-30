@@ -1,17 +1,18 @@
 import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
+
 //* CSS
 import 'normalize.css'
-import 'utils/scss/main.scss'
+import 'utils/css/main.css'
+
 //* Local Imports
-import Footer from 'components/global/footer'
-import Nav from 'components/global/nav'
 import GlobalStyles from 'utils/GlobalStyles'
 import theme from 'utils/Theme'
-import { graphql, useStaticQuery } from 'gatsby'
 import Seo from 'utils/Seo'
+import { Nav } from 'components/global'
 
-// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+//* Smooth scroll on all links
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]')
@@ -49,10 +50,8 @@ const Layout = ({ children, title, description }) => {
       <Seo schemaMarkup={schema} title={title} description={description} />
       <>
         <GlobalStyles />
-        {/* <Nav /> */}
-        <main>
-          {children}
-        </main>
+        <Nav />
+        <main>{children}</main>
         {/* <Footer /> */}
       </>
     </ThemeProvider>

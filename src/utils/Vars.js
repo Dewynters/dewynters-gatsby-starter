@@ -1,14 +1,16 @@
-const { css } = require('styled-components')
+import { css } from 'styled-components'
 
 const Vars = css`
   :root {
     //* Colours Main
-    --main: #ee5f48;
-    --background: #f4e9da;
-    --grey: #3a3a3a;
+    --main: #30e87a;
+    --secondary: #008897;
+    --alt: #ff575f;
+    --background: #363d47;
+    --grey: #333333;
     --white: #ffffff;
     --black: #000000;
-    //* Colours Secondary 
+    //* Colours Secondary
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -30,13 +32,19 @@ const Vars = css`
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+
     //* Fonts
-    --fontMain: 'Gotham', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
+    --fontMain: roc-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
+    --fontSecondary: Nunito Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
+
     //* Widths
     --maxWidth: 1300px;
     --auto: 0 auto;
+
     //* Transition
     --transition: all 0.25s ease-in-out;
   }
