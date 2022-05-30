@@ -14,7 +14,6 @@ const Animations = css`
       opacity: 1;
     }
   }
-
 `
 
 export default Animations

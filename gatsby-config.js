@@ -13,7 +13,7 @@ module.exports = {
     description: `Dewynters`,
     author: `Dewynters`,
     siteName: `Dewynters`,
-    siteUrl: process.env.GATSBY_FRONTEND_URL
+    siteUrl: process.env.GATSBY_FRONTEND_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -62,7 +62,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include:  /svgs/
+          include: /svgs/,
         },
       },
     },

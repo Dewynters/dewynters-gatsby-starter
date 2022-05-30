@@ -27,9 +27,17 @@
     "gatsby-plugin-sass": "^5.15.0",
     "gatsby-plugin-sharp": "^4.15.0",
     "gatsby-plugin-styled-components": "^5.15.0",
+<<<<<<< HEAD
     "gatsby-source-filesystem": "^4.15.0",
     "gatsby-transformer-json": "^4.15.0",
     "gatsby-transformer-sharp": "^4.15.0",
+=======
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^4.15.0",
+    "gatsby-transformer-json": "^4.15.0",
+    "gatsby-transformer-sharp": "^4.15.0",
+    "gsap": "^3.10.4",
+>>>>>>> d9c64c35ccb839ce13cb388f6f7c04b639876952
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
@@ -44,7 +52,29 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@types/node": "^17.0.36",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-wesbos": "^3.0.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "gatsby-plugin-postcss": "^5.15.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.7.2"
   },
   "keywords": [
     "gatsby"

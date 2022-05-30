@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         margin: 0 auto;
         height: auto;
+        background: #000;
         font-family: var(--fontMain);
     }
    h1 {
