@@ -27,17 +27,11 @@
     "gatsby-plugin-sass": "^5.15.0",
     "gatsby-plugin-sharp": "^4.15.0",
     "gatsby-plugin-styled-components": "^5.15.0",
-<<<<<<< HEAD
-    "gatsby-source-filesystem": "^4.15.0",
-    "gatsby-transformer-json": "^4.15.0",
-    "gatsby-transformer-sharp": "^4.15.0",
-=======
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^4.15.0",
     "gatsby-transformer-json": "^4.15.0",
     "gatsby-transformer-sharp": "^4.15.0",
     "gsap": "^3.10.4",
->>>>>>> d9c64c35ccb839ce13cb388f6f7c04b639876952
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
