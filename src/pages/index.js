@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout from 'utils/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+
+import { Layout } from 'utils/Layout'
 
 const BodyStyles = styled.div`
   width: 100%;
