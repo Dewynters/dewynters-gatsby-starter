@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 
-import GothamBookWOFF2 from 'utils/fonts/GothamBook.woff2'
-import GothamBookWOFF from 'utils/fonts/GothamBook.woff'
+import GothamBookWOFF2 from 'utils/Fonts/GothamBook.woff2'
+import GothamBookWOFF from 'utils/Fonts/GothamBook.woff'
 
 const Typography = css`
   @font-face {
