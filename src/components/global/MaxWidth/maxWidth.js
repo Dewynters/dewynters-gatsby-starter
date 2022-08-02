@@ -1,23 +1,27 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
 
 const StyledMaxWidth = styled.section`
   width: 100%;
   .container-max {
-    width: 90%;
+    width: 85%;
     max-width: var(--maxWidth);
     margin: var(--auto);
   }
 `
-const MaxWidth = props => {
-  const { children } = props
-  return (
-    <StyledMaxWidth>
+const MaxWidth = ({ children, ...props }) => (
+  <StyledMaxWidth>
+    {props.$noLazy ? (
       <div className="container-max">{children}</div>
-    </StyledMaxWidth>
-  )
-}
+    ) : (
+      <LazyLoad offset={250}>
+        <div className="container-max">{children}</div>
+      </LazyLoad>
+    )}
+  </StyledMaxWidth>
+)
 
 MaxWidth.propTypes = {
   children: PropTypes.any,
