@@ -2,12 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { Layout } from 'utils/Layout'
+import { Layout } from 'components/global'
+import { Faqs } from 'components/blocks'
+
+
+
+
 
 const BodyStyles = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: var(--black);
+  background-color: var(--grey);
   display: flex;
   align-items: center;
   section {
@@ -19,7 +24,7 @@ const BodyStyles = styled.div`
     width: 90%;
     margin: var(--auto);
     h1 {
-      color: var(--white);
+      color: var(--black);
       font-size: clamp(1rem, 0.1471rem + 4.2647vw, 2.8125rem);
     }
     .gatsby-image-wrapper {
@@ -37,6 +42,7 @@ const IndexPage = () => {
           <StaticImage src="../images/Dewynters-Share.jpg" alt="" />
         </section>
       </BodyStyles>
+      <Faqs />
     </Layout>
   )
 }

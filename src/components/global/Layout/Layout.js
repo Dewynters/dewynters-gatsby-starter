@@ -10,6 +10,7 @@ import 'utils/css/main.css'
 import GlobalStyles from 'utils/GlobalStyles'
 import theme from 'utils/Theme'
 import Seo from 'utils/Seo'
+import { Nav } from '../Nav'
 
 //* Smooth scroll on all links
 if (typeof window !== 'undefined') {
@@ -49,7 +50,7 @@ const Layout = ({ children, title, description }) => {
       <Seo schemaMarkup={schema} title={title} description={description} />
       <>
         <GlobalStyles />
-        {/* <Nav /> */}
+        <Nav />
         <main>{children}</main>
         {/* <Footer /> */}
       </>

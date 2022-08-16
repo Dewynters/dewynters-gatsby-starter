@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import { Layout } from 'utils/Layout'
+import { Layout } from 'components/global'
 
 const UsingSSR = ({ serverData }) => (
   <Layout>

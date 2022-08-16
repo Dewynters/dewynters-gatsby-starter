@@ -7,7 +7,7 @@ const Vars = css`
     --secondary: #008897;
     --alt: #ff575f;
     --background: #363d47;
-    --grey: #333333;
+    --grey: #F7F7F7;
     --white: #ffffff;
     --black: #000000;
     //* Colours Secondary

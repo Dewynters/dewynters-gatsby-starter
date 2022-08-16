@@ -8,6 +8,7 @@
     "@builder.io/partytown": "^0.6.4",
     "babel-plugin-styled-components": "^2.0.7",
     "bootstrap": "5.2.0",
+    "browser-monads": "^1.0.0",
     "dotenv": "^16.0.1",
     "eslint-import-resolver-webpack": "^0.13.2",
     "gatsby": "^4.20.0",

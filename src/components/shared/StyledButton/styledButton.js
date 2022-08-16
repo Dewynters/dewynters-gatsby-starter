@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { StaticImage } from 'gatsby-plugin-image'
-import ButtonBorder from 'svgs/button-border.svg'
 import { media } from 'utils/Media'
 
 
