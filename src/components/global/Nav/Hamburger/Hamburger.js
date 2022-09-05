@@ -21,7 +21,7 @@ const HamburgerStyles = styled.button`
     flex-direction: column;
     gap: 0.5rem;
     div {
-      transform-origin: 7px;
+      transform-origin: 10.5px;
       width: 100%;
       height: 2px;
       background: var(--black);
@@ -49,7 +49,6 @@ const Hamburger = ({ navOpen, setnavOpen }) => {
     topBun.current = gsap
       .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.5 })
       .to(q('.top'), {
-        width: '75%',
         translateY: 7,
         rotate: 45,
         // duration: 0.25,
@@ -64,7 +63,6 @@ const Hamburger = ({ navOpen, setnavOpen }) => {
     bottomBun.current = gsap
       .timeline({ duration: 0.2, ease: 'power1.out', stagger: 0.5 })
       .to(q('.bottom'), {
-        width: '75%',
         margin: 0,
         translateY: -7,
         rotate: -45,

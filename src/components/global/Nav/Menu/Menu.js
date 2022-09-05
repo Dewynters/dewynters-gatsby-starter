@@ -116,7 +116,7 @@ const Menu = ({ navOpen, setNavOpen, setOpen }) => {
 Menu.propTypes = {
   navOpen: PropTypes.bool,
   setNavOpen: PropTypes.func,
-  setOpen: PropTypes.bool,
+  setOpen: PropTypes.func,
 }
 
 export default Menu

@@ -5,10 +5,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Layout } from 'components/global'
 import { Faqs } from 'components/blocks'
 
-
-
-
-
 const BodyStyles = styled.div`
   width: 100%;
   height: 100vh;

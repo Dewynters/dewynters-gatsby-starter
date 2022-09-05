@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
+
 import { gsap } from 'gsap'
 import ArrowIcon from 'svgs/down-arrow.svg'
 import { media } from 'utils/Media'
@@ -34,6 +35,7 @@ const SingleFaqStyles = styled.section`
   .answer {
     visibility: hidden;
     /* max-height: 0; */
+    overflow: hidden;
     height: 0;
     div {
       position: relative;
@@ -66,7 +68,6 @@ const SingleFaq = props => {
   useEffect(() => {
     faqRef.current = gsap
       .timeline({ ease: 'power1.out' })
-
       .to(q('.answer'), {
         visibility: 'visible',
         height: 'auto',
@@ -78,10 +79,6 @@ const SingleFaq = props => {
         },
         '<'
       )
-
-    return () => {
-      faqRef.current?.kill()
-    }
   }, [])
   useEffect(() => {
     if (open === id) {
