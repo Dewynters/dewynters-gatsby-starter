@@ -9,6 +9,14 @@ import { media } from 'utils/Media'
 
 
 const ButtonStyles = styled.button`
+  width: 200px;
+  background: var(--black);
+  border-radius: 0;
+  border: solid 2px var(--black);
+  padding: .5rem ;
+  span {
+    color: var(--white);
+  }
  
 `
 const StyledButton = ({
@@ -49,7 +57,7 @@ const StyledButton = ({
   }
   return (
     <ButtonStyles>
-      <a href={to} {...props}>
+      <a {...props}>
         <span>{text}</span>
       </a>
     </ButtonStyles>

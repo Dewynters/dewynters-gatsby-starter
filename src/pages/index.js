@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { Layout } from 'components/global'
-import { Faqs } from 'components/blocks'
+import { Faqs, SignupForm } from 'components/blocks'
+import { StyledButton } from 'components/shared'
+
 
 const BodyStyles = styled.div`
   width: 100%;
@@ -27,18 +29,29 @@ const BodyStyles = styled.div`
       width: 60%;
       margin: 0 auto;
     }
+    .button {
+      width: 300px;
+      margin: 2rem auto;
+      text-align: center;
+    }
   }
 `
 const IndexPage = () => {
+  const [open, setOpen] = useState(false)
+
   return (
     <Layout>
       <BodyStyles>
         <section>
           <h1>Dewynters Gatsby Starter</h1>
           <StaticImage src="../images/Dewynters-Share.jpg" alt="" />
+          <div className="button">
+            <StyledButton text="Open popup" onClick={() => setOpen(true)} />
+          </div>
         </section>
       </BodyStyles>
       <Faqs />
+      <SignupForm open={open} setOpen={setOpen} />
     </Layout>
   )
 }
